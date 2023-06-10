@@ -1,0 +1,6 @@
+<h1>Add a bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment, placeholder: 'Write a comment of this movie' %>
+  <%= f.input :movie_id, collection: Movie.all %>
+  <%= f.submit "Add bookmark", class: 'btn btn-primary' %>
+<% end %>
